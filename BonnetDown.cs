@@ -13,9 +13,9 @@ public class BonnetDown : MonoBehaviour {
         a = true;	
     }
     
-    public void Bonnetdown()
+    public void bonnetDown()
     {
-        filterchange2 permission = GameObject.Find("airfiltertop").GetComponent<filterchange2>();
+        filterchange permission = GameObject.Find("airfiltertop").GetComponent<filterchange>();
         BonnetUp bon = GameObject.Find("Bonnet").GetComponent<BonnetUp>();
         if (permission.bonnetpermit)
         {
@@ -32,7 +32,7 @@ public class BonnetDown : MonoBehaviour {
         }
     }
 	
-    public void bonnetDown()
+    public void BonnetUp()
     {
         if (cnt < 20)
         {
