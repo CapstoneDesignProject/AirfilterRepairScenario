@@ -5,7 +5,7 @@ public class filterChange : MonoBehaviour
 {
     public bool connect;
     public bool bonnetpermit;
-    Vector filterPosition;
+    Vector3 filterPosition;
 
     filterchange newFilter;
     BonnetUp bonnetUp;
