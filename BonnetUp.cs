@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BonnetUp : MonoBehaviour {
-    public bool bnu = false;
+    public bool bonnetUp = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,7 +10,7 @@ public class BonnetUp : MonoBehaviour {
 	 public void Bonnetup()
     {
         transform.Translate(new Vector3(0, 0.2f, 0));
-        bnu = true;
+        bonnetUp = true;
     }
 	// Update is called once per frame
 	void Update () {
