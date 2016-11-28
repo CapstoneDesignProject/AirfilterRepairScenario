@@ -41,7 +41,7 @@ public class filterChange : MonoBehaviour
 		transform.rotation = Quaternion.Euler(filterNewRotation);
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 bonnetpermit = true;
-                bonnetUp.bnu = false;
+                bonnetUp.bonnetUp = false;
             }
         }
     }
