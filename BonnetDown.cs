@@ -4,7 +4,7 @@ using System.Collections;
 
 
 public class BonnetDown : MonoBehaviour {
-    public int cnt, cnt2;
+    public int cntDown, cntUp;
     public bool flag;
 
     filterchange permission;
@@ -15,8 +15,8 @@ public class BonnetDown : MonoBehaviour {
 	
     // Use this for initialization
     void Start () {
-        cnt = 0;
-        cnt2 = 0;
+        cntUp = 0;
+        cntDown = 0;
         flag = true;	
         
 	permission = GameObject.Find("airfiltertop").GetComponent<FilterChange>();     
@@ -28,27 +28,28 @@ public class BonnetDown : MonoBehaviour {
     
     public void bonnetDown()
     {
-        if (permission.bonnetpermit)
-        {
-            if (cnt2 < MAX_CNT)
+	    if(!permission.bonnetpermit)
+		    return;
+        
+            if (cntUp < MAX_CNT)
             {
                 transform.Rotate(bonnetOpenRotation);
-                cnt2++;
+                cntUp++;
             }
-            if (cnt2 == MAX_CNT && flag)
+            if (cntUp == MAX_CNT && flag)
             {
-               bon.transform.Translate(bonnetClosePosition);
+               bonnet.transform.Translate(bonnetClosePosition);
                flag = false;
             }
-        }
+        
     }
 	
     public void bonnetUp()
     {
-        if (cnt < MAX_CNT)
+        if (cntDown < MAX_CNT)
         {
             transform.Rotate(bonnetCloseRotation);
-            cnt++;
+            cntDown++;
         }
     }
 }
