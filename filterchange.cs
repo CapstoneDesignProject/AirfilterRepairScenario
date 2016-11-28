@@ -5,13 +5,13 @@ public class filterChange : MonoBehaviour
 {
     public bool connect;
     public bool bonnetpermit;
-	Vec filterPosition;
+    Vector filterPosition;
 
-	filterchange newFilter;
-	BonnetUp bonnetUp;
+    filterchange newFilter;
+    BonnetUp bonnetUp;
 
-	Vector3 filterNewPosition;
-	Vector3 filterNewRotation;
+    Vector3 filterNewPosition;
+    Vector3 filterNewRotation;
 
     void Start()
     {
