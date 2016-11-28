@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class filterChange : MonoBehaviour
+public class FilterChange : MonoBehaviour
 {
     public bool connect;
     public bool bonnetpermit;
@@ -19,7 +19,7 @@ public class filterChange : MonoBehaviour
 	connect = false;
 	bonnetpermit = false;
 
-	newFilter = GameObject.Find("newfilter").GetComponent<filterchange>();	
+	newFilter = GameObject.Find("newfilter").GetComponent<FilterChange>();	
 	bonnetUp = GameObject.Find("Bonnet").GetComponent<BonnetUp>();
 
 	filterNewPosition = new vector3 (-9.578f, 2.184f, -99.127f);
