@@ -1,35 +1,51 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class filterchange : MonoBehaviour
+public class filterChange : MonoBehaviour
 {
-    public bool connect = false;
-    // Use this for initialization
+    public bool connect;
+    public bool bonnetpermit;
+	Vec filterPosition;
+
+	filterchange newFilter;
+	BonnetUp bonnetUp;
+
+	Vector3 filterNewPosition;
+	Vector3 filterNewRotation;
+
     void Start()
     {
+		v = transform.localPosition;
+		connect = false;
+		bonnetpermit = false;
+
+		newFilter = GameObject.Find("newfilter").GetComponent<filterchange>();
+		bonnetUp = GameObject.Find("Bonnet").GetComponent<BonnetUp>();
+
+		filterNewPosition = new vector3 (-9.578f, 2.184f, -99.127f);
+		filterNewRotation = new vector3 (0.4816588f, 359.7331f, 0.6789147f);
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 v;
-        v = transform.localPosition;
-        if ((transform.localPosition.x >= -10.0f && transform.localPosition.x <= -8.0f) && (transform.localPosition.y >= 1.0f && transform.localPosition.y <= 3.0f) && (transform.localPosition.z >= -100.0f && transform.localPosition.z <= -98.0f))
+       
+    
+        if (newFilter.connect == true)
         {
-            connect = true;
-        }
-        //해당 오브젝트의 포지션값을 v에 넣고
-        if (connect == true)
-        {
-            v.x = -9.578f;//원하는 값을 입력
-            v.y = 2.084f;
-            v.z = -99.127f;
-            transform.localPosition = v;
-            transform.rotation = Quaternion.Euler(1.1664f, 287.843f, 169.2583f);
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            Destroy(this.GetComponent<BoxCollider>());
-        }
+            if ((transform.localPosition.x >= -10.0f && transform.localPosition.x <= -8.0f) && (transform.localPosition.y >= 1.0f && transform.localPosition.y <= 3.0f) && (transform.localPosition.z >= -100.0f && transform.localPosition.z <= -98.0f))
+            {
+                connect = true;
+            }
 
+            if (connect == true)
+            {
+				transform.localPosition = filterNewPosition;
+				transform.rotation = Quaternion.Euler(filterNewRotation);
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                bonnetpermit = true;
+                bonnetUp.bnu = false;
+            }
+        }
     }
 }
