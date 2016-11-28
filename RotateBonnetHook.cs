@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bonnethookrotate : MonoBehaviour {
+public class RotateBonnetHook : MonoBehaviour {
     public int cnt = 0;
     public bool handconnect=false;
    
