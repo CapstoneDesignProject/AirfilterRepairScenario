@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BonnetUp2 : MonoBehaviour {
-    public int cnt = 0, cnt2 = 0;
-    public bool a = true;
+public class BonnetDown : MonoBehaviour {
+    public int cnt, cnt2;
+    public bool;
 
    
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start () {
+        cnt = 0;
+        cnt2 = 0;
+        a = true;	
+    }
+    
     public void Bonnetdown()
     {
         filterchange2 permission = GameObject.Find("airfiltertop").GetComponent<filterchange2>();
@@ -28,17 +31,13 @@ public class BonnetUp2 : MonoBehaviour {
             }
         }
     }
-    public void Bonnetup2()
+	
+    public void bonnetDown()
     {
         if (cnt < 20)
         {
             transform.Rotate(-2.0f, 0, 0);
             cnt++;
         }
-       
     }
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
