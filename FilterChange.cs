@@ -8,7 +8,7 @@ public class FilterChange : MonoBehaviour
     Vector3 filterPosition;
 
     filterchange newFilter;
-    BonnetUp bonnetUp;
+    BonnetUp bonnet;
 
     Vector3 filterNewPosition;
     Vector3 filterNewRotation;
@@ -41,7 +41,7 @@ public class FilterChange : MonoBehaviour
 		transform.rotation = Quaternion.Euler(filterNewRotation);
                 GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 bonnetpermit = true;
-                bonnetUp.bonnetUp = false;
+                bonnet.bonnetUp = false;
             }
         }
     }
