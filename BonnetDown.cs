@@ -19,7 +19,7 @@ public class BonnetDown : MonoBehaviour {
         cnt2 = 0;
         flag = true;	
         
-	permission = GameObject.Find("airfiltertop").GetComponent<filterchange>();     
+	permission = GameObject.Find("airfiltertop").GetComponent<FilterChange>();     
 	bonnet = GameObject.Find("Bonnet").GetComponent<BonnetUp>();
 	bonnetPosition = new Vector3(0, -0.2f, 0);
 	bonnetOpenRotation = new Vector3(2.0f, 0, 0);
