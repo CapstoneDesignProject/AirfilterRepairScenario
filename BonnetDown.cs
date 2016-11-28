@@ -43,7 +43,7 @@ public class BonnetDown : MonoBehaviour {
         }
     }
 	
-    public void BonnetUp()
+    public void bonnetUp()
     {
         if (cnt < MAX_CNT)
         {
