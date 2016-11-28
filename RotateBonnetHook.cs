@@ -34,11 +34,11 @@ public class RotateBonnetHook : MonoBehaviour {
                     
 		    this.GetComponent<Rigidbody>().isKinematic = false;
 		    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-		    BonnetUp bu = GameObject.Find("Bonnet").GetComponent<BonnetUp>();
-		    bu.Bonnetup();
+		    BonnetUp bonnetUp = GameObject.Find("Bonnet").GetComponent<BonnetUp>();
+		    bonnetUp.Bonnetup();
                     GameObject boxcoll = GameObject.Find("HandController");
-		    BoxCollider bc = boxcoll.GetComponent<BoxCollider>();
- 		    bc.gameObject.SetActive(false);
+		    BoxCollider bCollider = boxcoll.GetComponent<BoxCollider>();
+ 		    bCollider.gameObject.SetActive(false);
                }
             }
        }
